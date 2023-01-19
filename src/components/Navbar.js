@@ -43,21 +43,20 @@ const Navbar = (props) => {
         </ul>
       </div>
 
-      { 
-        floatInfo && 
-        <FloatInfo 
-          floatInfo={FloatInfo}
-          productQuantity={productQuantity}
-          setProductQuantity={setProductQuantity}
-        /> 
-      }
+      
+      <FloatInfo 
+        floatInfo={floatInfo}
+        productQuantity={productQuantity}
+        setProductQuantity={setProductQuantity}
+      /> 
+      
 
       <div className='nav__icon-container' >
         <div className='nav__cart-container'>
-          { !(productQuantity == 0) && <span className='nav__cart-number'>{productQuantity}</span> }
+          { !(productQuantity === 0) && <span className='nav__cart-number'>{productQuantity}</span> }
           <img onClick={changeShowMenu} src={CartIcon} alt='cart-icon'/>
         </div>
-        <img className='nav__avatar-image' src={AvatarImage} alt='avatar-image' />
+        <img className='nav__avatar-image' src={AvatarImage} alt='avatar' />
       </div>
     </nav>
   )
