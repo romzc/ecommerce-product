@@ -17,12 +17,18 @@ const Navbar = (props) => {
 
   const changeShowMenu = () => {
     setFloatInfo(!floatInfo)
+    setShowMenu(false)
+  }
+
+  const showSideMenu = () => {
+    setShowMenu(!showMenu)
+    setFloatInfo(false)
   }
 
   return (
     <nav className='nav__container'>
       <img 
-        onClick={() => setShowMenu(!showMenu) }
+        onClick={showSideMenu }
         src={MenuIcon} alt='close-icon'
         className='nav__hamburger-icon'
       />
