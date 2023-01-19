@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import  products from '../images/Products'
 import  productThumbnails from '../images/ThumbnailProducts'
 
@@ -43,7 +43,7 @@ const SlideShow = (props) => {
     const divs = productThumbnails.map((item,index) => { 
         return <img 
                 src={item.image} 
-                alt={item.id} 
+                alt="main-land" 
                 key={item.id}
                 onClick={()=> changeSlide(index)}
             />
@@ -60,21 +60,25 @@ const SlideShow = (props) => {
                     className="image active"
                     src={products[0].image}
                     onClick={() => setShowDetailImage(prev=>!prev)}
+                    alt='product1'
                 />
                 <img 
                     className="image" 
                     src={products[1].image}
                     onClick={() => setShowDetailImage(prev=>!prev)}
+                    alt='product2'
                 />
                 <img 
                     className="image" 
                     src={products[2].image}
                     onClick={() => setShowDetailImage(prev=>!prev)}
+                    alt='product3'
                 />
                 <img 
                     className="image" 
                     src={products[3].image}
                     onClick={() => setShowDetailImage(prev=>!prev)}
+                    alt='product4'
                 />
             </div>
 
