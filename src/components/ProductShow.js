@@ -18,7 +18,7 @@ const ProductShow = (props) => {
     const bottomImages = product_thumbnails.map((item,index) => { 
         return <img 
                 src={item.image} 
-                alt={item.id} 
+                alt="thumnbail" 
                 key={item.id}
                 onClick={()=> changeSlideTo(index)}
             />
@@ -55,7 +55,7 @@ const ProductShow = (props) => {
                     <img onClick={() => prevSlide()} src={PrevIcon} alt='previcon'/>
                     <img onClick={() => nextSlide()} src={NextIcon} alt='nexticon'/>
                 </div>
-                <img ref={slider} className='productShow__mainImage' src={products[index].image} alt="main-image"/>
+                <img ref={slider} className='productShow__mainImage' src={products[index].image} alt="main"/>
             </div>
             <div className='productShow__bottomImages'>
                 {bottomImages}
