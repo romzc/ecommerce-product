@@ -26,7 +26,7 @@ const FloatInfo = (props) => {
                             <img  onClick={() => setProductQuantity(0)} className="float__image-delete" src={CloseIcon} alt="delete-icon" />
                         </div>
                 }
-                <button>Checkout</button>
+                { productQuantity > 0 && <button>Checkout</button> }
             </div>
         </div>
     )
