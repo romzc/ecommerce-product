@@ -26,10 +26,8 @@ const Navbar = (props) => {
         src={MenuIcon} alt='close-icon'
         className='nav__hamburger-icon'
       />
-      { 
-        showMenu && 
-        <Menu setShowMenu={setShowMenu} showMenu={showMenu} /> 
-      }
+       
+      <Menu setShowMenu={setShowMenu} showMenu={showMenu} /> 
 
       <h2>sneakers</h2>
 
@@ -44,6 +42,7 @@ const Navbar = (props) => {
       </div>
 
       
+        
       <FloatInfo 
         floatInfo={floatInfo}
         productQuantity={productQuantity}
